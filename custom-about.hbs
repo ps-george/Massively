@@ -1,0 +1,50 @@
+{{!< default}}
+
+{{#post}}
+{{!-- Everything inside the #post tags pulls data from the page --}}
+
+<main id="main">
+    <section class="post">
+
+        <header class="major">
+            <h1>{{title}}</h1>
+        </header>
+
+        {{#if authors}}
+          <section class="author-header">
+            {{#foreach authors}}
+              <div class="author-header box">
+                {{#if profile_image}}
+                    <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+                {{/if}}
+                <h2><a href="/author/{{slug}}">{{name}}</a></h2>
+                {{#if bio}}
+                    <p class="content">{{bio}}</p>
+                {{/if}}
+                <div class="author-meta">
+                  {{#if location}}
+                    <div class="author-location icon fa-map-pin">{{location}}</div>
+                  {{/if}}
+                  {{#if website}}
+                    <a href="{{website}}" class="icon fa-globe" title="Website"><span class="label">Website</span></a>
+                  {{/if}}
+                  {{#if twitter}}
+                    <a href="{{twitter_url}}" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a>
+                  {{/if}}
+                  {{#if facebook}}
+                    <a href="{{facebook_url}}" class="icon fa-facebook" title="Facebook"><span class="label">Facebook</span></a>
+                  {{/if}}
+                </div>
+              </div>
+            {{/foreach}}
+          </section>
+        {{/if}}
+
+        {{content}}
+
+        </div>
+
+    </section>
+</main>
+
+{{/post}}

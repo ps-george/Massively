@@ -23,7 +23,7 @@
 }
 
 .content {
-    max-width: 700px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -223,15 +223,10 @@
 
 .kg-width-full {
     position: relative;
-    margin-left: -14.1rem;
-    margin-right: -14.1rem;
-    width: calc(100% + 28.25rem);
+    margin-left: -8rem;
+    margin-right: -8rem;
+    width: calc(100% + 16rem);
 
-    @include breakpoint('<=large') {
-        margin-left: -8rem;
-        margin-right: -8rem;
-        width: calc(100% + 16rem);
-    }
     @include breakpoint('<=medium') {
         margin-left: -4rem;
         margin-right: -4rem;
