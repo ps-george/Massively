@@ -4,14 +4,13 @@ into the {body} of the default.hbs template --}}
 
 {{!-- Main --}}
 <main id="main">
-
     {{!-- Featured Post --}}
     {{#is "home"}}
     {{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
         {{#foreach featured_post}}
             <article class="post featured">
                 <header class="major">
-                    <span class="date">{{date format="MMM D, YYYY"}}</span>
+                    <span class="date">One for the road</span>
                     <h2><a href="{{url}}">{{title}}</a></h2>
                     <p>{{excerpt words="44"}}</p>
                 </header>
@@ -27,8 +26,12 @@ into the {body} of the default.hbs template --}}
     {{/is}}
 
     {{!-- Posts --}}
+    <div class="post featured">
+        <header class="major">
+            <h2>Articles</h2>
+        </header>
+    </div>
     <section class="posts">
-
         {{#foreach posts}}
         <article>
             <header>
